@@ -7,6 +7,7 @@ import Category from './src/Screens/Category';
 import Offers from './src/Screens/Offers';
 import Account from './src/Screens/Account';
 import Cart from './src/Screens/Cart';
+import PDP from './src/Screens/PDP';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,10 +20,11 @@ const App = () => {
         <Stack.Screen name="Offers" component={Offers} />
         <Stack.Screen name="Account" component={Account} />
         <Stack.Screen name="Cart" component={Cart} />
-        
+        <Stack.Screen name="PDP" component={PDP} />
 
-</Stack.Navigator>
-        </NavigationContainer>
+
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 

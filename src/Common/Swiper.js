@@ -29,10 +29,12 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#fff',
+		width:w
 	},
 	container: {
 		margin: 5,
-		borderRadius:10
+		borderRadius:10,
+		alignItems:'center'
 	},
 	sliderImage: {
 		width:'100%',height:'100%',	borderRadius:10
