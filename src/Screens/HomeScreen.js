@@ -1,9 +1,10 @@
 import {Dimensions, FlatList, StyleSheet, Text, View,Image, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import BottomTab from './Common/BottomTab';
-import Header from './Common/Header';
-import SwiperComponent from './Common/Swiper';
+import Header from '../Common/Header';
+import BottomTab from '../Common/BottomTab';
+import SwiperComponent from '../Common/Swiper';
+
 const Data = [
   {name:'Mobile',id:0,image:'http://4.bp.blogspot.com/-1gTfeLFdUIA/Ujw8Bh0h_GI/AAAAAAAAACs/Mh0oGRVICWc/s1600/9x4+SSM+copy.jpg'},
   { name: 'Laptop', id: 1, image: 'https://www.digitaltrends.com/wp-content/uploads/2021/08/dell-xps-15-oled-2021-laptop.jpg?fit=720%2C720&p=1' },
@@ -63,7 +64,7 @@ const HomeScreen = ({navigation}) => {
     <View
       style={{margin:5,paddingHorizontal:8}}
       key={item.id}
-      >
+    >
       
       <TouchableOpacity style={styles.cartItem}>
         	<Image style={styles.catImageStyle} source={{uri:item.image}}/>
@@ -76,9 +77,12 @@ const HomeScreen = ({navigation}) => {
        
 </View>
       {/* .......... */}
-     <View style={{backgroundColor:'#ccc',height:h/5,alignItems:'center',justifyContent:'center'}}>
-       <SwiperComponent />
-      </View> 
+     <View style={{width:w-20,height:h/4,backgroundColor:'#fff'.at,elevation:10}}>
+      <SwiperComponent />
+     </View>
+
+
+
       <View
         style={{
           flex: 1,
