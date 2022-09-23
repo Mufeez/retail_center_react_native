@@ -1,32 +1,48 @@
-/* import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Header from '../Common/Header'
 import BottomTab from '../Common/BottomTab'
+import Header from '../Common/Header'
 
-export default function Account({ navigation }) {
-	return (
-		<View
+
+
+const Account = ({navigation}) => {
+  return (
+	<View
 			style={{
 				flex: 1,
-
 				alignItems: 'center',
-
 			}}>
-			<Header navigation={navigation} />
+			<Header currentScreen={'Account'} navigation={navigation} />
+			
+			
 
 
 
-			<Text>Account</Text>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
 			<View style={{ bottom: 0, position: 'absolute' }}>
-				<BottomTab navigation={navigation} tabname='cat' />
+				<BottomTab navigation={navigation} currentpage='acc' />
 			</View>
-
 		</View>
-	)
+  )
 }
 
-const styles = StyleSheet.create({}) */
+export default Account
+
+const styles = StyleSheet.create({})

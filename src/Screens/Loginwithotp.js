@@ -1,18 +1,16 @@
 import { StyleSheet, Text, TextInput, View, Dimensions, Image, TouchableOpacity ,Pressable, Keyboard, StatusBar} from 'react-native'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ButtonContainer, ButtonText } from '../Common/styles';
 import OTPInput from './../Common/OTPInput';
-
-
 
 const w = Dimensions.get('screen').width;
 const h = Dimensions.get('screen').height;
 const Loginwithotp = ({navigation}) => {
     const [otpCode, setOTPCode] = useState("");
     const [isPinReady, setIsPinReady] = useState(false);
-    const maximumCodeLength = 4;
-
+    const maximumCodeLength = 4;    
+    
 
     const PressFC = () =>{
         Keyboard.dismiss

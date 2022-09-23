@@ -1,41 +1,57 @@
-import { StyleSheet, Text, View, Dimensions, Image } from 'react-native'
-import React, { Component } from 'react'
+import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native'
+import React from 'react'
 import Swiper from 'react-native-swiper';
+import { Colors } from './Colors';
 
 const w = Dimensions.get('screen').width;
 const h = Dimensions.get('screen').height;
-export default class SwiperComponent extends Component {
-	render() {
+
+
+ const SwiperComponent = ({navigation}) => {
+	
 		return (
-			<Swiper style={styles.wrapper} showsButtons={false}>
-				<View style={styles.container}>
+			<Swiper autoplay style={styles.wrapper} activeDotColor={Colors.white} showsButtons={false}>
+								
+				<TouchableOpacity onPress={()=> navigation.navigate('PDP',{itemDetails:''})} activeOpacity={0.8} style={styles.container}>
 				<Image style={styles.sliderImage}
-					 source={require('../Assets/digi.jpg')} />
-				</View>
-				<View style={styles.container}>
+					 source={require('../Assets/mi.jpg')} />
+				</TouchableOpacity>
+				<TouchableOpacity onPress={()=> navigation.navigate('PDP',{itemDetails:''})} activeOpacity={0.8} style={styles.container}>
 				<Image style={styles.sliderImage}
-					 source={require('../Assets/digi.jpg')} />
-				</View>
+					 source={require('../Assets/iphone-x.webp')} />
+				</TouchableOpacity>
+				<TouchableOpacity onPress={()=> navigation.navigate('PDP',{itemDetails:''})} activeOpacity={0.8} style={styles.container}>
+				<Image style={styles.sliderImage}
+					 source={require('../Assets/s22.jpg')} />
+				</TouchableOpacity>
+				<TouchableOpacity onPress={()=> navigation.navigate('PDP',{itemDetails:''})} activeOpacity={0.8} style={styles.container}>
+				<Image style={styles.sliderImage}
+					 source={require('../Assets/mac.jpg')} />
+				</TouchableOpacity>
+				<TouchableOpacity onPress={()=> navigation.navigate('PDP',{itemDetails:''})} activeOpacity={0.8} style={styles.container}>
+				<Image style={styles.sliderImage}
+					 source={require('../Assets/iPhone-14.webp')} />
+				</TouchableOpacity>
 				
 			</Swiper>
 		)
-	}
+	
 }
 
 
-
+export default SwiperComponent;
 const styles = StyleSheet.create({
 	wrapper: {
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#fff',
+		
 	},
 	container: {
-		margin: 5,
+		marginHorizontal:10,
 		borderRadius: 10
 	},
 	sliderImage: {
-		width:'100%',height:'100%'
+		width:'100%',height:'98%',borderRadius:10
 	}
 })
 

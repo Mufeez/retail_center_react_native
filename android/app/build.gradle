@@ -257,6 +257,12 @@ android {
 }
 
 dependencies {
+
+    // For animated GIF support
+    
+implementation 'com.facebook.fresco:fresco:2.0.0'
+implementation 'com.facebook.fresco:animated-gif:2.6.0'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
 implementation project(':react-native-vector-icons')
     //noinspection GradleDynamicVersion

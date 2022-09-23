@@ -3,30 +3,20 @@ import React from 'react'
 import Header from '../Common/Header'
 import BottomTab from '../Common/BottomTab'
 
-const Offers = ({navigation}) => {
-		return (
-				<View
-      style={{
-        flex: 1,
-       
-        alignItems: 'center',
-        
-				}}>
-				<Header navigation={navigation} />
-				
-
-
-<Text>Offers</Text>
-
-
-
-
-				<View style={{bottom:0,position:'absolute'}}>
-					<BottomTab navigation={navigation} tabname='cat'/>
-</View>
-				
-						</View>
-		)
+const Offers = ({ navigation }) => {
+	return (
+		<View
+			style={{
+				flex: 1,
+				alignItems: 'center',
+			}}>
+			<Header currentScreen={'Offers'} navigation={navigation} />
+			<Text>Offers</Text>
+			<View style={{ bottom: 0, position: 'absolute' }}>
+				<BottomTab navigation={navigation} currentpage='offer' />
+			</View>
+		</View>
+	)
 }
 
 export default Offers
